@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cryptonite</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="project2_yair.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.canvasjs.com/ga/jquery.canvasjs.min.js"></script>
+    <script src="project2_yair.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@400;600&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <h1>cryptonite</h1>
+    <div class="bg"></div>
+
+    <div class="header">
+        <div id="menu">
+            <button type="button" class="btn btn-outline-dark link" pageTitle="about">About</button>
+            <button type="button" class="btn btn-outline-dark link" pageTitle="reports">Real-time reports</button>
+            <button type="button" class="btn btn-outline-dark link" pageTitle="coins">Coins</button>
+        </div>
+
+        <div id="SearchBox" class="input-group mb-3">
+            <button id="delete" class="btn btn-outline-dark" type="button" style="display: none;">❌</button>
+            <input id="text" type="text" class="btn btn-outline-dark form-control" placeholder="Enter a currency name"
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button id="Search" class="btn btn-outline-dark" type="button">🔍</button>
+            </div>
+        </div>
+
+        <button id="Report" type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Currency Report
+        </button>
+    </div>
+
+    <div>
+        <div class="page coins">
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <br><br><br><br>
+            <span> Loading coins...</span>
+        </div>
+
+        <div class="page reports" style="display: none;">
+            <div id="chart"></div>
+        </div>
+
+        <div class="page about" style="display: none;">
+            <h5>About:</h5>
+            <p>Hello! I'm Yair, 27 years old, a student with a passion for technology, web development, and user
+                experience design.</p><br>
+            <h5>About the site:</h5>
+            <p>This site was built as a personal project to allow users to track digital currencies in real time. The
+                site includes features such as:</p>
+            <ul>
+                <li>A dummy report on the market value of digital currencies.</li>
+                <li>Ability to mark selected currencies and create a custom report.</li>
+                <li>View selected currencies on a personal chart.</li>
+                <li>A modern and interactive user experience.</li>
+                <li>Support for quick search by currency name.</li>
+                <li>Smart caching of information to improve user experience (cache).</li>
+            </ul><br>
+            <h5>Website Goals:</h5>
+            <p>My main goal was to create a friendly and simple platform that would help users understand the world of
+                digital currencies in an accessible way. I believe that everyone deserves the opportunity to learn and
+                get to know this field, and the website is the first step towards that.</p><br>
+            <h5>Acknowledgements:</h5>
+            <p>Thank you for taking the time to explore my site! I am always open to comments, ideas for improvement,
+                and new collaborations.</p><br>
+            <span>© All rights reserved to "cryptonite" by Yair Dror 2025.</span>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Currency Report</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="save" type="button" class="btn btn-primary">Save Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
