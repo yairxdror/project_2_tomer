@@ -157,7 +157,7 @@ h1 {
     }
 
     .bg {
-        background-attachment: scroll
+        background-attachment: scroll !important;
     }
 
     .header {
