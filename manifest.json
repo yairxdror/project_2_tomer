@@ -3,8 +3,8 @@
     "short_name": "cryptonite",
     "start_url": "./",
     "display": "standalone",
-    "background_color": "#c5b8ac",
-    "theme_color": "#c5b8ac",
+    "background_color": "#d3c796",
+    "theme_color": "#d3c796",
     "icons": [
       {
         "src": "favicon.png",

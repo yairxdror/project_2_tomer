@@ -15,10 +15,14 @@ div {
 }
 
 body {
-
     background: linear-gradient(90deg, #c5b8ac, #e6c37f, #c5b8ac) !important;
-
 }
+
+.status-bar-fill {
+  height: env(safe-area-inset-top, 20px);
+  background: linear-gradient(90deg, #c5b8ac, #e6c37f, #c5b8ac);
+}
+
 
 .header {
     display: flex;
