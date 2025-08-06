@@ -15,8 +15,8 @@ div {
 }
 
 body {
-    
-    background: linear-gradient(90deg, #c5b8ac, #e6c37f, #c5b8ac) !important; 
+
+    background: linear-gradient(90deg, #c5b8ac, #e6c37f, #c5b8ac) !important;
 
 }
 
@@ -37,7 +37,7 @@ body {
 .bg {
     background-image: url("https://i.postimg.cc/wM2mm93Q/pexels-photo-14856610.png");
     background-attachment: fixed;
-    width: 100%;
+    width: 100vw;
     height: 300px;
 }
 
@@ -148,12 +148,16 @@ h1 {
 }
 
 .modal-content {
-   z-index: 99;
+    z-index: 99;
 }
 
 @media (max-width: 768px) {
     h1 {
         left: 30px;
+    }
+
+    .bg {
+        background-attachment: scroll
     }
 
     .header {
@@ -196,11 +200,12 @@ h1 {
         margin-top: -30px;
     }
 
-    .coin .head h3,h6{
+    .coin .head h3,
+    h6 {
         margin-left: 15px;
     }
 
-    .moreInfo{
+    .moreInfo {
         margin-left: 15px;
     }
 }
